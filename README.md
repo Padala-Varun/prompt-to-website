@@ -14,17 +14,7 @@ Generate and preview custom websites (HTML, CSS, JS) from natural language promp
 
 🔐 .env file support for secure API key usage
 
-📁 Project Structure
-prompt-to-website/
-│
-├── app.py # Main Streamlit app
-├── templates/
-│ ├── gemini_utils.py # Gemini API logic + response parsing
-│ ├── file_utils.py # Save/load HTML/CSS/JS files
-│ └── download_zip.py # Create ZIP for website download
-├── generated_sites/ # Stores generated files temporarily
-├── .env # Your Gemini API key
-└── README.md
+
 
 🔧 Setup Instructions
 
@@ -38,3 +28,21 @@ prompt-to-website/
 
 ▶️ Run the App
 streamlit run app.py
+
+📦 Example Prompts
+"A personal portfolio with about me, skills, and contact section."
+
+"A modern landing page for a mobile app with a hero section and download button."
+
+"A simple to-do list website with add/delete functionality in JavaScript."
+
+📌 To-Do / Next Features
+ Drag-and-drop element editor
+
+ Save projects permanently
+
+ One-click deployment to GitHub Pages
+
+ Image support in generated HTML
+
+
