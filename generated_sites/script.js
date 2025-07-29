@@ -50,30 +50,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Add JavaScript for animations and interactions here
-// Example: Smooth scrolling
-const anchors = document.querySelectorAll('a[href^="#"]');
-
-anchors.forEach(anchor => {
+// Example: Smooth scrolling to sections
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
 
-    const targetId = this.getAttribute('href');
-    const targetElement = document.querySelector(targetId);
-
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-    }
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
   });
 });
 
-// Example: Add hover effects
-const cards = document.querySelectorAll('.card');
-
-cards.forEach(card => {
-  card.addEventListener('mouseover', () => {
-    card.classList.add('shadow-2xl');
-  });
-  card.addEventListener('mouseout', () => {
-    card.classList.remove('shadow-2xl');
-  });
+// Example: Add loading animation
+window.addEventListener('load', function() {
+  // Remove loading indicator
+  const loader = document.getElementById('loader');
+  if (loader) {
+    loader.style.display = 'none';
+  }
 });

@@ -582,120 +582,135 @@ body {
 
 
 :root {
-    --primary: #FF6347;
-    --secondary: #4CAF50;
-    --accent: #FFC107;
-    --dark-bg: #1a1a1a;
-    --light-bg: #f5f5f5;
-    --text-primary: white;
-    --text-secondary: black;
-    --space-xs: 0.25rem;
-    --space-sm: 0.5rem;
-    --space-md: 1rem;
-    --space-lg: 2rem;
-    --space-xl: 4rem;
-    --space-2xl: 8rem;
-    --space-3xl: 12rem;
-    --space-4xl: 16rem;
+  --primary: #FF6347; /* Vivid Orange */
+  --secondary: #483D8B; /* Dark Slate Blue */
+  --accent: #00FFFF; /* Cyan */
+  --bg-dark: #1e1e1e;
+  --text-light: #f5f5f5;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+  --space-2xl: 8rem;
 }
 
-body.dark {
-    background-color: var(--dark-bg);
-    color: var(--text-primary);
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.bg-dark {
+  background-color: var(--bg-dark);
 }
 
 .bg-gradient-1 {
-    background: linear-gradient(to right, #FF6347, #FFC107);
+  background: linear-gradient(to right, #FF6347, #FFB347);
 }
 
 .bg-gradient-2 {
-    background: linear-gradient(to right, #4CAF50, #8BC34A);
+  background: linear-gradient(to right, #483D8B, #00FFFF);
 }
 
 .bg-gradient-3 {
-    background: linear-gradient(to right, #2196F3, #03A9F4);
+  background: linear-gradient(to right, #008080, #00CED1);
 }
 
 .bg-gradient-4 {
-    background: linear-gradient(to right, #9C27B0, #E040FB);
+  background: linear-gradient(to right, #800080, #FF1493);
 }
 
 .bg-gradient-5 {
-    background: linear-gradient(to right, #FF9800, #FFEB3B);
+  background: linear-gradient(to right, #3CB371, #90EE90);
 }
 
 .card-gradient-1 {
-    background: linear-gradient(to right, #FF5733, #FFC300);
+  background: linear-gradient(to right, #FFD700, #FFA500);
 }
 
 .card-gradient-2 {
-    background: linear-gradient(to right, #3498db, #2980b9);
+  background: linear-gradient(to right, #FF00FF, #800080);
 }
 
 .card-gradient-3 {
-    background: linear-gradient(to right, #8e44ad, #bc83e6);
+  background: linear-gradient(to right, #00FF00, #008000);
 }
 
 .btn-primary {
-    background-color: var(--primary);
-    color: var(--text-primary);
+  background-color: var(--primary);
+  color: var(--text-light);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: darken(var(--primary), 10%);
 }
 
 .btn-secondary {
-    background-color: var(--secondary);
-    color: var(--text-primary);
+  background-color: var(--secondary);
+  color: var(--text-light);
 }
 
 .btn-accent {
-    background-color: var(--accent);
-    color: var(--text-primary);
+  background-color: var(--accent);
+  color: var(--bg-dark);
 }
 
 .text-white {
-    color: white !important;
+  color: var(--text-light);
 }
 
 .text-primary {
-    color: var(--primary) !important;
-}
-
-.emoji {
-    font-size: 1.2rem;
-}
-
-.emoji-lg {
-    font-size: 2rem;
-}
-
-.emoji-xl {
-    font-size: 3rem;
+  color: var(--primary);
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--space-md);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
 }
 
 .section {
-    padding: var(--space-xl) 0;
+  padding: var(--space-xl) 0;
 }
 
-.hero {
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.py-xl {
+  padding: var(--space-xl) 0;
 }
 
-.card {
-    border: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.py-2xl {
+  padding: var(--space-2xl) 0;
+}
+
+.mb-4, .mb-8 {
+  margin-bottom: var(--space-lg);
+}
+
+.mb-8 {
+  margin-bottom: var(--space-xl);
+}
+
+.emoji {
+  font-size: 1.2em;
+}
+
+.emoji-xl {
+  font-size: 2em;
+}
+
+.emoji-lg {
+  font-size: 1.5em;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
+  .grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
 }
