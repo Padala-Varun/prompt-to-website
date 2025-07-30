@@ -3,209 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="🏢 Modern corporate landing page for [Your Company Name] – building innovative solutions with perfect alignment and vibrant design. Discover our features, testimonials, and contact us today! 🚀">
-    <meta name="keywords" content="corporate, landing page, modern, UI/UX, web design, vibrant, alignment, emojis, glassmorphism, responsive, business, solutions, technology, innovation">
-    <meta name="author" content="Your Company Name">
-    <title>🏢 [Your Company Name] - Innovating the Future with Perfect Alignment ✨</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* CSS will be injected here by the build process */
-    </style>
+    <meta name="description" content="Discover stunning bikes and thrilling adventures. A portfolio showcasing exceptional bicycle design and craftsmanship from BikeCrafters.">
+    <meta name="keywords" content="bikes, bicycle, cycling, portfolio, design, custom bikes, mountain bike, road bike, electric bike, e-bike, BikeCrafters">
+    <meta name="author" content="BikeCrafters">
+    <title>🚴‍♂️ BikeCrafters: Pedal Your Dreams! ✨</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50%' y='50%' style='dominant-baseline:central;text-anchor:middle;font-size:90px;'%3E🚴%FE0F%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-primary-dark text-white">
-    <header class="header py-md">
+<body>
+    <header class="header" role="banner">
         <div class="container flex items-center justify-between">
-            <a href="#hero" class="logo text-white text-2xl font-bold flex items-center gap-xs focusable" aria-label="[Your Company Name] Logo and Home"><span class="emoji-lg">🏢</span> [Your Company Name]</a>
-            <nav class="navigation" aria-label="Main Navigation">
-                <button class="hamburger-menu" aria-label="Open navigation menu" aria-expanded="false">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </button>
-                <ul class="nav-list flex items-center gap-xl">
-                    <li><a href="#features" class="nav-link text-white hover-text-accent transition-colors duration-300 focusable"><span class="emoji">⭐</span> Features</a></li>
-                    <li><a href="#testimonials" class="nav-link text-white hover-text-accent transition-colors duration-300 focusable"><span class="emoji">🗣️</span> Testimonials</a></li>
-                    <li><a href="#contact" class="nav-link text-white hover-text-accent transition-colors duration-300 focusable"><span class="emoji">📞</span> Contact</a></li>
-                    <li><button class="btn btn-secondary focusable"><span class="emoji">🚀</span> Get Started</button></li>
+            <a href="#hero" class="logo text-white flex items-center">
+                <span class="emoji-lg">🚴‍♂️</span> BikeCrafters <span class="emoji">✨</span>
+            </a>
+            <nav class="nav" aria-label="Main navigation">
+                <ul class="nav-list flex items-center" role="menu">
+                    <li class="nav-item" role="none"><a href="#hero" class="nav-link text-white" role="menuitem">🏠 Home <span class="emoji">✨</span></a></li>
+                    <li class="nav-item" role="none"><a href="#features" class="nav-link text-white" role="menuitem">⭐ Features <span class="emoji">🛠️</span></a></li>
+                    <li class="nav-item" role="none"><a href="#portfolio" class="nav-link text-white" role="menuitem">🎨 Portfolio <span class="emoji">🖼️</span></a></li>
+                    <li class="nav-item" role="none"><a href="#about" class="nav-link text-white" role="menuitem">🚀 About Us <span class="emoji">💡</span></a></li>
+                    <li class="nav-item" role="none"><a href="#contact" class="nav-link text-white" role="menuitem">📞 Contact <span class="emoji">📧</span></a></li>
                 </ul>
             </nav>
+            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </header>
 
-    <main>
-        <section id="hero" class="hero section-gradient-1 text-center py-4xl flex items-center justify-center">
-            <div class="container flex flex-col items-center justify-center text-center">
-                <h1 class="text-white mb-lg animate-fade-in-up">
-                    <span class="emoji-xl">✨</span> Innovate, Create, Elevate <span class="emoji-xl">💡</span><br>
-                    Your Vision, Our Expertise.
+    <main role="main">
+        <section id="hero" class="hero section-gradient-1 flex items-center justify-center text-center">
+            <div class="container flex flex-col items-center justify-center">
+                <h1 class="text-white mb-lg animated-fade-in-up">
+                    <span>🚀</span> Pedal Your Dreams: BikeCrafters <span class="emoji-xl">✨</span>
                 </h1>
-                <p class="text-white text-lg mb-2xl animate-fade-in-up delay-200">
-                    We transform complex challenges into intuitive, beautiful, and perfectly aligned digital experiences. <span class="emoji">🎯</span>
+                <p class="text-white mb-xl animated-fade-in-up delay-100">
+                    💡 Crafting incredible two-wheeled experiences with perfect alignment and vibrant designs.
                 </p>
-                <div class="flex gap-md mb-2xl animate-fade-in-up delay-400">
-                    <button class="btn btn-primary focusable"><span class="emoji">🚀</span> Discover Solutions</button>
-                    <button class="btn btn-outline-white focusable"><span class="emoji">📚</span> Learn More</button>
-                </div>
-                <img src="https://via.placeholder.com/1200x600/4A00E0/FFFFFF?text=Modern+Dashboard+Mockup+%F0%9F%9A%80" alt="Modern Dashboard Mockup showcasing company's innovative solutions" class="hero-image glassmorphic animate-fade-in delay-600">
+                <a href="#portfolio" class="btn btn-primary animated-fade-in-up delay-200" role="button">
+                    🎯 Explore Our Bikes <span class="emoji">🚴‍♀️</span>
+                </a>
             </div>
         </section>
 
-        <section id="features" class="section section-gradient-2 py-4xl">
-            <div class="container">
-                <h2 class="text-center text-white mb-3xl animate-fade-in-up">
-                    <span class="emoji-lg">⭐</span> Our Core Strengths <span class="emoji-lg">💪</span>
+        <section id="features" class="section section-gradient-2 flex flex-col items-center justify-center" aria-labelledby="features-heading">
+            <div class="container text-center">
+                <h2 id="features-heading" class="text-white mb-2xl animated-fade-in-up">
+                    <span>⭐</span> Our Cutting-Edge Features <span class="emoji-lg">🛠️</span>
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2xl place-items-center">
-                    <div class="card card-gradient-1 text-dark text-center animate-fade-in-up delay-100">
-                        <div class="card-body flex flex-col items-center p-xl">
-                            <span class="emoji-xl mb-md">🚀</span>
-                            <h3 class="card-title text-primary mb-sm">Lightning-Fast Performance</h3>
-                            <p class="card-text">Our solutions are engineered for speed, ensuring a seamless and efficient user experience. <span class="emoji">⚡</span></p>
-                        </div>
+                <div class="grid grid-cols-3 gap-xl animated-fade-in-up delay-100">
+                    <div class="card card-gradient-1 flex flex-col items-center justify-center text-center" role="article">
+                        <div class="card-icon mb-md"><span class="emoji-xl" aria-hidden="true">⚡</span></div>
+                        <h3 class="card-title text-white mb-xs">Electric Power Boost <span class="emoji">🔋</span></h3>
+                        <p class="card-text text-white-light">Experience effortless climbs and extended rides with our integrated e-bike systems.</p>
                     </div>
-                    <div class="card card-gradient-2 text-dark text-center animate-fade-in-up delay-200">
-                        <div class="card-body flex flex-col items-center p-xl">
-                            <span class="emoji-xl mb-md">🎨</span>
-                            <h3 class="card-title text-primary mb-sm">Stunning UI/UX Design</h3>
-                            <p class="card-text">We craft beautiful, intuitive interfaces that delight users and drive engagement. <span class="emoji">✨</span></p>
-                        </div>
+                    <div class="card card-gradient-2 flex flex-col items-center justify-center text-center" role="article">
+                        <div class="card-icon mb-md"><span class="emoji-xl" aria-hidden="true">⚖️</span></div>
+                        <h3 class="card-title text-white mb-xs">Lightweight Frames <span class="emoji">🕊️</span></h3>
+                        <p class="card-text text-white-light">Engineered with advanced materials for superior agility and speed.</p>
                     </div>
-                    <div class="card card-gradient-3 text-dark text-center animate-fade-in-up delay-300">
-                        <div class="card-body flex flex-col items-center p-xl">
-                            <span class="emoji-xl mb-md">🔒</span>
-                            <h3 class="card-title text-primary mb-sm">Robust Security & Scalability</h3>
-                            <p class="card-text">Built on a secure and scalable foundation, your data and growth are always protected. <span class="emoji">🛡️</span></p>
-                        </div>
+                    <div class="card card-gradient-3 flex flex-col items-center justify-center text-center" role="article">
+                        <div class="card-icon mb-md"><span class="emoji-xl" aria-hidden="true">⚙️</span></div>
+                        <h3 class="card-title text-white mb-xs">Precision Gearing <span class="emoji">🎯</span></h3>
+                        <p class="card-text text-white-light">Smooth, reliable shifting for optimal performance on any terrain.</p>
                     </div>
-                    <div class="card card-gradient-2 text-dark text-center animate-fade-in-up delay-400">
-                        <div class="card-body flex flex-col items-center p-xl">
-                            <span class="emoji-xl mb-md">📈</span>
-                            <h3 class="card-title text-primary mb-sm">Data-Driven Insights</h3>
-                            <p class="card-text">Leverage powerful analytics to make informed decisions and accelerate your success. <span class="emoji">📊</span></p>
-                        </div>
+                    <div class="card card-gradient-1 flex flex-col items-center justify-center text-center" role="article">
+                        <div class="card-icon mb-md"><span class="emoji-xl" aria-hidden="true">🛡️</span></div>
+                        <h3 class="card-title text-white mb-xs">Enhanced Durability <span class="emoji">💪</span></h3>
+                        <p class="card-text text-white-light">Built to withstand the toughest challenges, ride after ride.</p>
                     </div>
-                    <div class="card card-gradient-3 text-dark text-center animate-fade-in-up delay-500">
-                        <div class="card-body flex flex-col items-center p-xl">
-                            <span class="emoji-xl mb-md">💡</span>
-                            <h3 class="card-title text-primary mb-sm">Innovative Solutions</h3>
-                            <p class="card-text">We embrace cutting-edge technologies to bring fresh, future-proof ideas to life. <span class="emoji">🌟</span></p>
-                        </div>
+                    <div class="card card-gradient-2 flex flex-col items-center justify-center text-center" role="article">
+                        <div class="card-icon mb-md"><span class="emoji-xl" aria-hidden="true">🌈</span></div>
+                        <h3 class="card-title text-white mb-xs">Customizable Aesthetics <span class="emoji">🎨</span></h3>
+                        <p class="card-text text-white-light">Personalize your ride with vibrant colors and unique finishes.</p>
                     </div>
-                    <div class="card card-gradient-1 text-dark text-center animate-fade-in-up delay-600">
-                        <div class="card-body flex flex-col items-center p-xl">
-                            <span class="emoji-xl mb-md">🌍</span>
-                            <h3 class="card-title text-primary mb-sm">Global Reach & Support</h3>
-                            <p class="card-text">Our services are designed to scale globally, backed by dedicated support 24/7. <span class="emoji">🌐</span></p>
-                        </div>
+                    <div class="card card-gradient-3 flex flex-col items-center justify-center text-center" role="article">
+                        <div class="card-icon mb-md"><span class="emoji-xl" aria-hidden="true">🌍</span></div>
+                        <h3 class="card-title text-white mb-xs">Eco-Friendly Design <span class="emoji">🌱</span></h3>
+                        <p class="card-text text-white-light">Committed to sustainable practices in every component.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="testimonials" class="section section-gradient-3 py-4xl">
-            <div class="container">
-                <h2 class="text-center text-white mb-3xl animate-fade-in-up">
-                    <span class="emoji-lg">🗣️</span> What Our Clients Say <span class="emoji-lg">💖</span>
+        <section id="portfolio" class="section section-gradient-3 flex flex-col items-center justify-center" aria-labelledby="portfolio-heading">
+            <div class="container text-center">
+                <h2 id="portfolio-heading" class="text-white mb-2xl animated-fade-in-up">
+                    <span>🎨</span> Our Masterpiece Collection <span class="emoji-lg">🖼️</span>
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2xl place-items-center">
-                    <blockquote class="card card-glassmorphic text-white text-center p-xl animate-fade-in-up delay-100">
-                        <p class="text-lg mb-md leading-relaxed">"[Your Company Name] transformed our online presence! Their attention to detail, vibrant designs, and perfect alignment exceeded all expectations. Truly brilliant!" <span class="emoji">🌟</span></p>
-                        <footer class="font-semibold text-accent flex flex-col items-center"><span class="emoji">👤</span> Alex P., CEO of InnovateTech</footer>
-                    </blockquote>
-                    <blockquote class="card card-glassmorphic text-white text-center p-xl animate-fade-in-up delay-200">
-                        <p class="text-lg mb-md leading-relaxed">"The team delivered a website that is not only visually stunning but also incredibly functional and responsive. A joy to work with from start to finish!" <span class="emoji">✨</span></p>
-                        <footer class="font-semibold text-accent flex flex-col items-center"><span class="emoji">👤</span> Sarah M., Marketing Director at GlobalSync</footer>
-                    </blockquote>
-                    <blockquote class="card card-glassmorphic text-white text-center p-xl animate-fade-in-up delay-300">
-                        <p class="text-lg mb-md leading-relaxed">"Seamless integration, robust performance, and a design that truly stands out. [Your Company Name] is our go-to partner for all digital projects." <span class="emoji">👍</span></p>
-                        <footer class="font-semibold text-accent flex flex-col items-center"><span class="emoji">👤</span> Ben L., CTO of FutureForward Solutions</footer>
-                    </blockquote>
+                <div class="grid grid-cols-2 gap-xl animated-fade-in-up delay-100">
+                    <div class="card portfolio-card card-gradient-light flex flex-col items-center justify-center text-center" role="article">
+                        <img src="https://via.placeholder.com/600x400/FF5733/FFFFFF?text=Road+Racer" alt="Sleek Road Racer Bike" class="card-image mb-md" loading="lazy">
+                        <h3 class="card-title text-primary mb-xs">The Agile Road Racer <span class="emoji">💨</span></h3>
+                        <p class="card-text text-primary-light">Designed for speed and precision on asphalt. Lightweight and aerodynamic.</p>
+                        <button class="btn btn-accent mt-md" role="button">View Details <span class="emoji">🔍</span></button>
+                    </div>
+                    <div class="card portfolio-card card-gradient-light flex flex-col items-center justify-center text-center" role="article">
+                        <img src="https://via.placeholder.com/600x400/33FF57/FFFFFF?text=Mountain+Beast" alt="Rugged Mountain Beast Bike" class="card-image mb-md" loading="lazy">
+                        <h3 class="card-title text-primary mb-xs">The Rugged Mountain Beast <span class="emoji">🏞️</span></h3>
+                        <p class="card-text text-primary-light">Conquer any trail with robust suspension and durable components.</p>
+                        <button class="btn btn-accent mt-md" role="button">View Details <span class="emoji">🔍</span></button>
+                    </div>
+                    <div class="card portfolio-card card-gradient-light flex flex-col items-center justify-center text-center" role="article">
+                        <img src="https://via.placeholder.com/600x400/3357FF/FFFFFF?text=Urban+Explorer" alt="Stylish Urban Explorer Bike" class="card-image mb-md" loading="lazy">
+                        <h3 class="card-title text-primary mb-xs">The Stylish Urban Explorer <span class="emoji">🏙️</span></h3>
+                        <p class="card-text text-primary-light">Navigate cityscapes with comfort and flair. Perfect for daily commutes.</p>
+                        <button class="btn btn-accent mt-md" role="button">View Details <span class="emoji">🔍</span></button>
+                    </div>
+                    <div class="card portfolio-card card-gradient-light flex flex-col items-center justify-center text-center" role="article">
+                        <img src="https://via.placeholder.com/600x400/FF33E9/FFFFFF?text=E-Dream" alt="Futuristic E-Bike Dream" class="card-image mb-md" loading="lazy">
+                        <h3 class="card-title text-primary mb-xs">The Futuristic E-Dream <span class="emoji">🔌</span></h3>
+                        <p class="card-text text-primary-light">Electric power meets modern design for the ultimate ride.</p>
+                        <button class="btn btn-accent mt-md" role="button">View Details <span class="emoji">🔍</span></button>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="cta" class="section section-gradient-4 py-3xl text-center">
-            <div class="container flex flex-col items-center justify-center text-center">
-                <h2 class="text-white mb-lg animate-fade-in-up">
-                    <span class="emoji-lg">🤝</span> Ready to Elevate Your Business? <span class="emoji-lg">📈</span>
-                </h2>
-                <p class="text-white text-lg mb-xl animate-fade-in-up delay-200">
-                    Let's discuss how our expertise can bring your vision to life with vibrant designs and flawless execution.
-                </p>
-                <button class="btn btn-accent btn-lg animate-bounce focusable" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
-                    <span class="emoji">👉</span> Get a Free Consultation <span class="emoji">✉️</span>
-                </button>
+        <section id="about" class="section section-gradient-4 flex flex-col items-center justify-center" aria-labelledby="about-heading">
+            <div class="container flex flex-col lg:flex-row items-center justify-center text-center lg:text-left gap-2xl">
+                <div class="about-image flex-shrink-0 mb-xl lg:mb-0 animated-fade-in-left">
+                    <img src="https://via.placeholder.com/400x400/8A2BE2/FFFFFF?text=BikeCrafters+Team" alt="BikeCrafters Team hard at work" class="rounded-full border-2 border-white shadow-xl max-w-full h-auto" style="box-shadow: var(--shadow-xl);" loading="lazy">
+                </div>
+                <div class="about-content flex-grow animated-fade-in-right">
+                    <h2 id="about-heading" class="text-white mb-lg">
+                        <span>🚀</span> Our Passionate Journey: About BikeCrafters <span class="emoji-lg">💡</span>
+                    </h2>
+                    <p class="text-white-light mb-md">
+                        At BikeCrafters, we believe that a bicycle is more than just a means of transport; it's a companion for adventure, a tool for fitness, and a canvas for personal expression. Founded in 2010, our mission has been to blend cutting-edge engineering with breathtaking design to create bikes that inspire and empower every rider. <span class="emoji">🌟</span>
+                    </p>
+                    <p class="text-white-light mb-md">
+                        From the sleek lines of a road racer to the rugged resilience of a mountain beast, each BikeCrafters model is meticulously crafted with attention to detail, using only the highest quality materials. We're not just building bikes; we're crafting experiences. <span class="emoji">🛠️</span>
+                    </p>
+                    <button class="btn btn-secondary mt-lg" role="button">Join Our Community <span class="emoji">🚴‍♂️</span></button>
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="section section-primary py-4xl">
-            <div class="container">
-                <h2 class="text-center text-primary mb-3xl animate-fade-in-up">
-                    <span class="emoji-lg">📞</span> Connect With Us <span class="emoji-lg">📬</span>
+        <section id="contact" class="section section-gradient-5 flex flex-col items-center justify-center" aria-labelledby="contact-heading">
+            <div class="container text-center">
+                <h2 id="contact-heading" class="text-white mb-2xl animated-fade-in-up">
+                    <span>📞</span> Let's Connect: Get in Touch! <span class="emoji-lg">📧</span>
                 </h2>
-                <div class="flex flex-col lg:flex-row items-start justify-center gap-4xl">
-                    <div class="contact-info flex-1 text-primary animate-fade-in-up delay-100 mb-2xl lg:mb-0">
-                        <h3 class="text-2xl font-semibold mb-lg flex items-center gap-sm"><span class="emoji-lg">📍</span> Our Hub</h3>
-                        <p class="mb-sm flex items-center gap-sm"><span class="emoji">🏢</span> 123 Innovation Drive, Tech City, TC 90210</p>
-                        <p class="mb-sm flex items-center gap-sm"><span class="emoji">📧</span> <a href="mailto:info@yourcompany.com" class="text-primary hover-text-accent transition-colors duration-300 focusable">info@yourcompany.com</a></p>
-                        <p class="mb-lg flex items-center gap-sm"><span class="emoji">📱</span> <a href="tel:+15551234567" class="text-primary hover-text-accent transition-colors duration-300 focusable">+1 (555) 123-4567</a></p>
-
-                        <h3 class="text-2xl font-semibold mb-lg flex items-center gap-sm"><span class="emoji-lg">🕒</span> Business Hours</h3>
-                        <p class="mb-sm flex items-center gap-sm"><span class="emoji">🗓️</span> Monday - Friday: 9:00 AM - 6:00 PM</p>
-                        <p class="mb-lg flex items-center gap-sm"><span class="emoji">☕</span> Weekends: By Appointment</p>
-
-                        <div class="social-links flex gap-md">
-                            <a href="#" aria-label="Facebook" class="social-icon focusable"><span class="emoji-xl">📘</span></a>
-                            <a href="#" aria-label="Twitter" class="social-icon focusable"><span class="emoji-xl">🐦</span></a>
-                            <a href="#" aria-label="LinkedIn" class="social-icon focusable"><span class="emoji-xl">🔗</span></a>
-                            <a href="#" aria-label="Instagram" class="social-icon focusable"><span class="emoji-xl">📸</span></a>
-                        </div>
+                <div class="contact-info grid grid-cols-1 md:grid-cols-3 gap-xl mb-2xl animated-fade-in-up delay-100">
+                    <div class="card card-gradient-light flex flex-col items-center justify-center text-center py-xl" role="contentinfo">
+                        <span class="emoji-xl mb-md" aria-hidden="true">✉️</span>
+                        <h3 class="text-primary mb-xs">Email Us</h3>
+                        <p class="text-primary-light">info@bikecrafters.com <span class="emoji">📧</span></p>
                     </div>
-
-                    <div class="contact-form-wrapper flex-1 animate-fade-in-up delay-200">
-                        <h3 class="text-2xl font-semibold mb-xl text-center text-primary flex items-center justify-center gap-sm"><span class="emoji-lg">📝</span> Send Us a Message</h3>
-                        <form id="contactForm" class="flex flex-col gap-md p-xl card-glassmorphic-light">
-                            <div class="form-group">
-                                <label for="name" class="block text-primary font-medium mb-xs"><span class="emoji">👤</span> Your Name:</label>
-                                <input type="text" id="name" name="name" required aria-required="true" placeholder="John Doe" class="input-field focusable">
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="block text-primary font-medium mb-xs"><span class="emoji">📧</span> Your Email:</label>
-                                <input type="email" id="email" name="email" required aria-required="true" placeholder="john.doe@example.com" class="input-field focusable">
-                            </div>
-                            <div class="form-group">
-                                <label for="subject" class="block text-primary font-medium mb-xs"><span class="emoji">🎯</span> Subject:</label>
-                                <input type="text" id="subject" name="subject" required aria-required="true" placeholder="Inquiry about your services" class="input-field focusable">
-                            </div>
-                            <div class="form-group">
-                                <label for="message" class="block text-primary font-medium mb-xs"><span class="emoji">💬</span> Your Message:</label>
-                                <textarea id="message" name="message" rows="6" required aria-required="true" placeholder="Tell us about your project..." class="input-field focusable"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-lg self-center focusable"><span class="emoji">✉️</span> Send Message</button>
-                        </form>
+                    <div class="card card-gradient-light flex flex-col items-center justify-center text-center py-xl" role="contentinfo">
+                        <span class="emoji-xl mb-md" aria-hidden="true">📱</span>
+                        <h3 class="text-primary mb-xs">Call Us</h3>
+                        <p class="text-primary-light">+1 (555) 123-4567 <span class="emoji">📞</span></p>
+                    </div>
+                    <div class="card card-gradient-light flex flex-col items-center justify-center text-center py-xl" role="contentinfo">
+                        <span class="emoji-xl mb-md" aria-hidden="true">📍</span>
+                        <h3 class="text-primary mb-xs">Visit Us</h3>
+                        <p class="text-primary-light">123 Cycle Lane, Velotown, CA 90210 <span class="emoji">🗺️</span></p>
                     </div>
                 </div>
+                <form class="contact-form flex flex-col items-center justify-center p-2xl card card-gradient-light" aria-label="Contact Form">
+                    <h3 class="text-primary mb-xl">Send Us a Message <span class="emoji">✍️</span></h3>
+                    <div class="form-group mb-lg">
+                        <label for="name" class="sr-only">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name " class="form-input" aria-required="true" required>
+                    </div>
+                    <div class="form-group mb-lg">
+                        <label for="email" class="sr-only">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email " class="form-input" aria-required="true" required>
+                    </div>
+                    <div class="form-group mb-lg">
+                        <label for="message" class="sr-only">Your Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message " class="form-textarea" aria-required="true" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-accent mt-lg" role="button">Send Message <span class="emoji">✉️</span></button>
+                </form>
             </div>
         </section>
     </main>
 
-    <footer class="footer section-gradient-1 py-2xl text-white text-center">
-        <div class="container flex flex-col items-center justify-center">
-            <div class="footer-nav flex flex-wrap justify-center gap-md mb-md">
-                <a href="#features" class="footer-link text-white hover-text-accent transition-colors duration-300 focusable"><span class="emoji">⭐</span> Features</a>
-                <a href="#testimonials" class="footer-link text-white hover-text-accent transition-colors duration-300 focusable"><span class="emoji">🗣️</span> Testimonials</a>
-                <a href="#contact" class="footer-link text-white hover-text-accent transition-colors duration-300 focusable"><span class="emoji">📞</span> Contact</a>
-                <a href="#" class="footer-link text-white hover-text-accent transition-colors duration-300 focusable"><span class="emoji">⚖️</span> Privacy Policy</a>
+    <footer class="footer section-gradient-footer flex flex-col items-center justify-center text-center py-2xl" role="contentinfo">
+        <div class="container">
+            <p class="text-white mb-md">
+                © 2024 BikeCrafters. All rights reserved. <span class="emoji">©️</span>
+            </p>
+            <p class="text-white-light">
+                Crafted with passion and precision. <span class="emoji">❤️</span>
+            </p>
+            <div class="social-links mt-md flex items-center justify-center gap-md">
+                <a href="#" aria-label="Follow us on Facebook" class="social-icon text-white"><span class="emoji-lg">📘</span></a>
+                <a href="#" aria-label="Follow us on Instagram" class="social-icon text-white"><span class="emoji-lg">📸</span></a>
+                <a href="#" aria-label="Follow us on Twitter" class="social-icon text-white"><span class="emoji-lg">🐦</span></a>
             </div>
-            <p class="mb-xs"><span class="emoji">©️</span> 2024 [Your Company Name]. All rights reserved. <span class="emoji">🚀</span></p>
-            <p class="text-sm"><span class="emoji">💖</span> Designed with perfect alignment and vibrant colors for a stellar experience. <span class="emoji">✨</span></p>
+            <p class="text-white-light mt-md">
+                Ride into the future! <span class="emoji">✨</span>
+            </p>
         </div>
     </footer>
 
-    <script>
-        // JavaScript will be injected here by the build process
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

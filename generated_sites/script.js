@@ -49,94 +49,117 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Hamburger Menu Functionality
-    const hamburger = document.querySelector('.hamburger-menu');
-    const navList = document.querySelector('.nav-list');
+// Smooth scrolling for all internal navigation links (anchors)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent default jump behavior
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navList.classList.toggle('active');
-        document.body.classList.toggle('no-scroll'); // Optional: disable scroll when menu is open
-        hamburger.setAttribute('aria-expanded', navList.classList.contains('active'));
-    });
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
 
-    // Close menu when a navigation link is clicked (for smooth scrolling)
-    document.querySelectorAll('.nav-link, .btn').forEach(link => {
-        link.addEventListener('click', () => {
-            if (navList.classList.contains('active')) {
-                hamburger.classList.remove('active');
-                navList.classList.remove('active');
-                document.body.classList.remove('no-scroll');
-                hamburger.setAttribute('aria-expanded', 'false');
-            }
-        });
-    });
-
-    // Smooth scroll for internal links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
+        if (targetElement) {
+            // Scroll smoothly to the target element
+            targetElement.scrollIntoView({
                 behavior: 'smooth'
             });
-        });
+        }
+
+        // Close mobile navigation menu if it's open after clicking a link
+        const nav = document.querySelector('.nav');
+        const navToggle = document.getElementById('nav-toggle');
+        if (nav.classList.contains('active')) {
+            nav.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false'); // Update ARIA attribute
+        }
     });
+});
 
-    // Contact Form Submission (Client-side simulation)
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-
-            // Basic validation
-            if (!name || !email || !subject || !message) {
-                alert('🚫 Please fill in all fields before sending your message! 📝');
-                return;
-            }
-            if (!/^[\w-]+(?:\.[\w-]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)) {
-                alert('📧 Please enter a valid email address!');
-                return;
-            }
-
-            // Simulate sending data (in a real app, this would be an AJAX call to a backend)
-            console.log('Sending message:');
-            console.log('Name:', name);
-            console.log('Email:', email);
-            console.log('Subject:', subject);
-            console.log('Message:', message);
-
-            alert('🎉 Your message has been sent successfully! We will get back to you soon. 🚀');
-            contactForm.reset(); // Clear the form
-        });
+// Header scroll effect: Add 'scrolled' class when scrolled down
+const header = document.querySelector('.header');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) { // If scrolled more than 50px from top
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
     }
+});
 
-    // Simple Scroll Animation (Fade-in-up effect on elements as they enter viewport)
-    const observerOptions = {
-        root: null, // viewport as root
-        rootMargin: '0px',
-        threshold: 0.1 // When 10% of the item is visible
-    };
+// Mobile navigation toggle (hamburger menu functionality)
+const navToggle = document.getElementById('nav-toggle');
+const nav = document.querySelector('.nav');
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                entry.target.style.animationPlayState = 'running';
-                observer.unobserve(entry.target); // Stop observing once animated
-            }
-        });
-    }, observerOptions);
+navToggle.addEventListener('click', () => {
+    // Toggle 'active' class on nav for styling (e.g., max-height for opening/closing)
+    nav.classList.toggle('active');
 
-    document.querySelectorAll('.animate-fade-in-up, .animate-fade-in').forEach(el => {
-        el.style.opacity = '0'; // Ensure elements are hidden before animation
-        el.style.transform = 'translateY(20px)'; // Initial state for fadeInUp
-        el.style.animationPlayState = 'paused'; // Pause animation until visible
-        observer.observe(el);
+    // Update ARIA-expanded attribute for accessibility
+    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!isExpanded));
+});
+
+// Intersection Observer for fade-in animations on scroll
+// Select all elements that have an animation class
+const animateOnScrollElements = document.querySelectorAll('.animated-fade-in-up, .animated-fade-in-left, .animated-fade-in-right');
+
+// Configure the Intersection Observer options
+const observerOptions = {
+    root: null, // 'null' means the viewport is the root
+    rootMargin: '0px',
+    threshold: 0.1 // When 10% of the element is visible, trigger the callback
+};
+
+// Create a new Intersection Observer instance
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // If the element enters the viewport, allow its animation to play
+            entry.target.style.animationPlayState = 'running';
+            entry.target.classList.add('visible'); // Optional: Add a class for persistent visibility if needed
+            observer.unobserve(entry.target); // Stop observing once the animation has played
+        }
     });
+}, observerOptions);
+
+// Observe each element that should animate on scroll
+animateOnScrollElements.forEach(el => {
+    el.style.animationPlayState = 'paused'; // Pause animations by default so they don't play on load
+    observer.observe(el);
+});
+
+// Active navigation link highlighting based on scroll position
+// This enhances user experience by showing which section is currently in view
+const sections = document.querySelectorAll('section[id]'); // Get all sections with an ID
+
+window.addEventListener('scroll', () => {
+    let currentActiveSectionId = ''; // Variable to hold the ID of the currently active section
+    const scrollY = window.pageYOffset; // Current scroll position
+    const headerHeight = header.offsetHeight; // Get height of fixed header for offset calculation
+
+    sections.forEach(section => {
+        // Calculate section's top and bottom boundaries, accounting for fixed header
+        const sectionTop = section.offsetTop - headerHeight - 1; // -1 to ensure it triggers slightly before top
+        const sectionHeight = section.clientHeight;
+
+        // Check if the current scroll position is within this section's boundaries
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            currentActiveSectionId = section.getAttribute('id');
+        }
+    });
+
+    // Loop through all navigation links and apply/remove 'active' class
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active'); // Remove 'active' from all links first
+        // If the link's href matches the current active section ID, add 'active' class
+        if (link.getAttribute('href').includes(currentActiveSectionId)) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// Set the initial active state for the 'Home' link on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const heroLink = document.querySelector('a[href="#hero"]');
+    if (heroLink) {
+        heroLink.classList.add('active');
+    }
 });
