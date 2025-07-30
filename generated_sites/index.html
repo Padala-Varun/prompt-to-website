@@ -1,79 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio website for a creative designer">
-  <title>🎨 My Creative Portfolio 🚀</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="🏢 Modern corporate landing page for [Your Company Name] – building innovative solutions with perfect alignment and vibrant design. Discover our features, testimonials, and contact us today! 🚀">
+    <meta name="keywords" content="corporate, landing page, modern, UI/UX, web design, vibrant, alignment, emojis, glassmorphism, responsive, business, solutions, technology, innovation">
+    <meta name="author" content="Your Company Name">
+    <title>🏢 [Your Company Name] - Innovating the Future with Perfect Alignment ✨</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS will be injected here by the build process */
+    </style>
 </head>
-<body class="bg-dark">
-  <header class="bg-gradient-1">
-    <nav class="container flex items-center justify-between py-4">
-      <a href="#" class="text-white text-2xl font-bold">🎨 My Portfolio 🖌️</a>
-      <ul class="flex space-x-6">
-        <li><a href="#about" class="text-white hover:text-accent">🧑‍🎨 About 👨‍🎨</a></li>
-        <li><a href="#services" class="text-white hover:text-accent">✨ Services ✨</a></li>
-        <li><a href="#portfolio" class="text-white hover:text-accent">🖼️ Portfolio 🖼️</a></li>
-        <li><a href="#contact" class="text-white hover:text-accent">✉️ Contact 📞</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="hero bg-gradient-2 py-2xl text-center">
-    <div class="container">
-      <h1 class="text-white text-5xl font-bold mb-4">👋 Hi, I'm John! <span class="emoji-xl">😊</span></h1>
-      <p class="text-white text-lg mb-8">Creative Designer &amp; Web Developer 💻</p>
-      <a href="#contact" class="btn btn-primary">Let's Connect! 🚀</a>
-    </div>
-  </section>
-
-  <section id="about" class="section bg-gradient-3 py-xl">
-    <div class="container">
-      <h2 class="text-white text-4xl font-bold mb-8 text-center">🧑‍🎨 About Me ✍️</h2>
-      <p class="text-white text-lg">I'm a passionate creative designer with 5+ years of experience, specializing in creating stunning visuals and user-friendly websites. I love to push boundaries and deliver innovative designs.</p>
-    </div>
-  </section>
-
-  <section id="services" class="section bg-gradient-4 py-xl">
-    <div class="container">
-      <h2 class="text-white text-4xl font-bold mb-8 text-center">✨ My Services 🌟</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="card card-gradient-1 p-6">
-          <h3 class="text-white text-xl font-bold mb-4">🎨 Web Design 🌐</h3>
-          <p class="text-white">I create beautiful, functional, and user-friendly websites that meet your needs.</p>
+<body class="bg-primary-dark text-white">
+    <header class="header py-md">
+        <div class="container flex items-center justify-between">
+            <a href="#hero" class="logo text-white text-2xl font-bold flex items-center gap-xs focusable" aria-label="[Your Company Name] Logo and Home"><span class="emoji-lg">🏢</span> [Your Company Name]</a>
+            <nav class="navigation" aria-label="Main Navigation">
+                <button class="hamburger-menu" aria-label="Open navigation menu" aria-expanded="false">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+                <ul class="nav-list flex items-center gap-xl">
+                    <li><a href="#features" class="nav-link text-white hover-text-accent transition-colors duration-300 focusable"><span class="emoji">⭐</span> Features</a></li>
+                    <li><a href="#testimonials" class="nav-link text-white hover-text-accent transition-colors duration-300 focusable"><span class="emoji">🗣️</span> Testimonials</a></li>
+                    <li><a href="#contact" class="nav-link text-white hover-text-accent transition-colors duration-300 focusable"><span class="emoji">📞</span> Contact</a></li>
+                    <li><button class="btn btn-secondary focusable"><span class="emoji">🚀</span> Get Started</button></li>
+                </ul>
+            </nav>
         </div>
-        <div class="card card-gradient-2 p-6">
-          <h3 class="text-white text-xl font-bold mb-4">🖌️ Graphic Design 🖼️</h3>
-          <p class="text-white">I design eye-catching logos, brochures, and other marketing materials to help you stand out.</p>
+    </header>
+
+    <main>
+        <section id="hero" class="hero section-gradient-1 text-center py-4xl flex items-center justify-center">
+            <div class="container flex flex-col items-center justify-center text-center">
+                <h1 class="text-white mb-lg animate-fade-in-up">
+                    <span class="emoji-xl">✨</span> Innovate, Create, Elevate <span class="emoji-xl">💡</span><br>
+                    Your Vision, Our Expertise.
+                </h1>
+                <p class="text-white text-lg mb-2xl animate-fade-in-up delay-200">
+                    We transform complex challenges into intuitive, beautiful, and perfectly aligned digital experiences. <span class="emoji">🎯</span>
+                </p>
+                <div class="flex gap-md mb-2xl animate-fade-in-up delay-400">
+                    <button class="btn btn-primary focusable"><span class="emoji">🚀</span> Discover Solutions</button>
+                    <button class="btn btn-outline-white focusable"><span class="emoji">📚</span> Learn More</button>
+                </div>
+                <img src="https://via.placeholder.com/1200x600/4A00E0/FFFFFF?text=Modern+Dashboard+Mockup+%F0%9F%9A%80" alt="Modern Dashboard Mockup showcasing company's innovative solutions" class="hero-image glassmorphic animate-fade-in delay-600">
+            </div>
+        </section>
+
+        <section id="features" class="section section-gradient-2 py-4xl">
+            <div class="container">
+                <h2 class="text-center text-white mb-3xl animate-fade-in-up">
+                    <span class="emoji-lg">⭐</span> Our Core Strengths <span class="emoji-lg">💪</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2xl place-items-center">
+                    <div class="card card-gradient-1 text-dark text-center animate-fade-in-up delay-100">
+                        <div class="card-body flex flex-col items-center p-xl">
+                            <span class="emoji-xl mb-md">🚀</span>
+                            <h3 class="card-title text-primary mb-sm">Lightning-Fast Performance</h3>
+                            <p class="card-text">Our solutions are engineered for speed, ensuring a seamless and efficient user experience. <span class="emoji">⚡</span></p>
+                        </div>
+                    </div>
+                    <div class="card card-gradient-2 text-dark text-center animate-fade-in-up delay-200">
+                        <div class="card-body flex flex-col items-center p-xl">
+                            <span class="emoji-xl mb-md">🎨</span>
+                            <h3 class="card-title text-primary mb-sm">Stunning UI/UX Design</h3>
+                            <p class="card-text">We craft beautiful, intuitive interfaces that delight users and drive engagement. <span class="emoji">✨</span></p>
+                        </div>
+                    </div>
+                    <div class="card card-gradient-3 text-dark text-center animate-fade-in-up delay-300">
+                        <div class="card-body flex flex-col items-center p-xl">
+                            <span class="emoji-xl mb-md">🔒</span>
+                            <h3 class="card-title text-primary mb-sm">Robust Security & Scalability</h3>
+                            <p class="card-text">Built on a secure and scalable foundation, your data and growth are always protected. <span class="emoji">🛡️</span></p>
+                        </div>
+                    </div>
+                    <div class="card card-gradient-2 text-dark text-center animate-fade-in-up delay-400">
+                        <div class="card-body flex flex-col items-center p-xl">
+                            <span class="emoji-xl mb-md">📈</span>
+                            <h3 class="card-title text-primary mb-sm">Data-Driven Insights</h3>
+                            <p class="card-text">Leverage powerful analytics to make informed decisions and accelerate your success. <span class="emoji">📊</span></p>
+                        </div>
+                    </div>
+                    <div class="card card-gradient-3 text-dark text-center animate-fade-in-up delay-500">
+                        <div class="card-body flex flex-col items-center p-xl">
+                            <span class="emoji-xl mb-md">💡</span>
+                            <h3 class="card-title text-primary mb-sm">Innovative Solutions</h3>
+                            <p class="card-text">We embrace cutting-edge technologies to bring fresh, future-proof ideas to life. <span class="emoji">🌟</span></p>
+                        </div>
+                    </div>
+                    <div class="card card-gradient-1 text-dark text-center animate-fade-in-up delay-600">
+                        <div class="card-body flex flex-col items-center p-xl">
+                            <span class="emoji-xl mb-md">🌍</span>
+                            <h3 class="card-title text-primary mb-sm">Global Reach & Support</h3>
+                            <p class="card-text">Our services are designed to scale globally, backed by dedicated support 24/7. <span class="emoji">🌐</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section section-gradient-3 py-4xl">
+            <div class="container">
+                <h2 class="text-center text-white mb-3xl animate-fade-in-up">
+                    <span class="emoji-lg">🗣️</span> What Our Clients Say <span class="emoji-lg">💖</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2xl place-items-center">
+                    <blockquote class="card card-glassmorphic text-white text-center p-xl animate-fade-in-up delay-100">
+                        <p class="text-lg mb-md leading-relaxed">"[Your Company Name] transformed our online presence! Their attention to detail, vibrant designs, and perfect alignment exceeded all expectations. Truly brilliant!" <span class="emoji">🌟</span></p>
+                        <footer class="font-semibold text-accent flex flex-col items-center"><span class="emoji">👤</span> Alex P., CEO of InnovateTech</footer>
+                    </blockquote>
+                    <blockquote class="card card-glassmorphic text-white text-center p-xl animate-fade-in-up delay-200">
+                        <p class="text-lg mb-md leading-relaxed">"The team delivered a website that is not only visually stunning but also incredibly functional and responsive. A joy to work with from start to finish!" <span class="emoji">✨</span></p>
+                        <footer class="font-semibold text-accent flex flex-col items-center"><span class="emoji">👤</span> Sarah M., Marketing Director at GlobalSync</footer>
+                    </blockquote>
+                    <blockquote class="card card-glassmorphic text-white text-center p-xl animate-fade-in-up delay-300">
+                        <p class="text-lg mb-md leading-relaxed">"Seamless integration, robust performance, and a design that truly stands out. [Your Company Name] is our go-to partner for all digital projects." <span class="emoji">👍</span></p>
+                        <footer class="font-semibold text-accent flex flex-col items-center"><span class="emoji">👤</span> Ben L., CTO of FutureForward Solutions</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="section section-gradient-4 py-3xl text-center">
+            <div class="container flex flex-col items-center justify-center text-center">
+                <h2 class="text-white mb-lg animate-fade-in-up">
+                    <span class="emoji-lg">🤝</span> Ready to Elevate Your Business? <span class="emoji-lg">📈</span>
+                </h2>
+                <p class="text-white text-lg mb-xl animate-fade-in-up delay-200">
+                    Let's discuss how our expertise can bring your vision to life with vibrant designs and flawless execution.
+                </p>
+                <button class="btn btn-accent btn-lg animate-bounce focusable" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+                    <span class="emoji">👉</span> Get a Free Consultation <span class="emoji">✉️</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-primary py-4xl">
+            <div class="container">
+                <h2 class="text-center text-primary mb-3xl animate-fade-in-up">
+                    <span class="emoji-lg">📞</span> Connect With Us <span class="emoji-lg">📬</span>
+                </h2>
+                <div class="flex flex-col lg:flex-row items-start justify-center gap-4xl">
+                    <div class="contact-info flex-1 text-primary animate-fade-in-up delay-100 mb-2xl lg:mb-0">
+                        <h3 class="text-2xl font-semibold mb-lg flex items-center gap-sm"><span class="emoji-lg">📍</span> Our Hub</h3>
+                        <p class="mb-sm flex items-center gap-sm"><span class="emoji">🏢</span> 123 Innovation Drive, Tech City, TC 90210</p>
+                        <p class="mb-sm flex items-center gap-sm"><span class="emoji">📧</span> <a href="mailto:info@yourcompany.com" class="text-primary hover-text-accent transition-colors duration-300 focusable">info@yourcompany.com</a></p>
+                        <p class="mb-lg flex items-center gap-sm"><span class="emoji">📱</span> <a href="tel:+15551234567" class="text-primary hover-text-accent transition-colors duration-300 focusable">+1 (555) 123-4567</a></p>
+
+                        <h3 class="text-2xl font-semibold mb-lg flex items-center gap-sm"><span class="emoji-lg">🕒</span> Business Hours</h3>
+                        <p class="mb-sm flex items-center gap-sm"><span class="emoji">🗓️</span> Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        <p class="mb-lg flex items-center gap-sm"><span class="emoji">☕</span> Weekends: By Appointment</p>
+
+                        <div class="social-links flex gap-md">
+                            <a href="#" aria-label="Facebook" class="social-icon focusable"><span class="emoji-xl">📘</span></a>
+                            <a href="#" aria-label="Twitter" class="social-icon focusable"><span class="emoji-xl">🐦</span></a>
+                            <a href="#" aria-label="LinkedIn" class="social-icon focusable"><span class="emoji-xl">🔗</span></a>
+                            <a href="#" aria-label="Instagram" class="social-icon focusable"><span class="emoji-xl">📸</span></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper flex-1 animate-fade-in-up delay-200">
+                        <h3 class="text-2xl font-semibold mb-xl text-center text-primary flex items-center justify-center gap-sm"><span class="emoji-lg">📝</span> Send Us a Message</h3>
+                        <form id="contactForm" class="flex flex-col gap-md p-xl card-glassmorphic-light">
+                            <div class="form-group">
+                                <label for="name" class="block text-primary font-medium mb-xs"><span class="emoji">👤</span> Your Name:</label>
+                                <input type="text" id="name" name="name" required aria-required="true" placeholder="John Doe" class="input-field focusable">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="block text-primary font-medium mb-xs"><span class="emoji">📧</span> Your Email:</label>
+                                <input type="email" id="email" name="email" required aria-required="true" placeholder="john.doe@example.com" class="input-field focusable">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" class="block text-primary font-medium mb-xs"><span class="emoji">🎯</span> Subject:</label>
+                                <input type="text" id="subject" name="subject" required aria-required="true" placeholder="Inquiry about your services" class="input-field focusable">
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="block text-primary font-medium mb-xs"><span class="emoji">💬</span> Your Message:</label>
+                                <textarea id="message" name="message" rows="6" required aria-required="true" placeholder="Tell us about your project..." class="input-field focusable"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg self-center focusable"><span class="emoji">✉️</span> Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer section-gradient-1 py-2xl text-white text-center">
+        <div class="container flex flex-col items-center justify-center">
+            <div class="footer-nav flex flex-wrap justify-center gap-md mb-md">
+                <a href="#features" class="footer-link text-white hover-text-accent transition-colors duration-300 focusable"><span class="emoji">⭐</span> Features</a>
+                <a href="#testimonials" class="footer-link text-white hover-text-accent transition-colors duration-300 focusable"><span class="emoji">🗣️</span> Testimonials</a>
+                <a href="#contact" class="footer-link text-white hover-text-accent transition-colors duration-300 focusable"><span class="emoji">📞</span> Contact</a>
+                <a href="#" class="footer-link text-white hover-text-accent transition-colors duration-300 focusable"><span class="emoji">⚖️</span> Privacy Policy</a>
+            </div>
+            <p class="mb-xs"><span class="emoji">©️</span> 2024 [Your Company Name]. All rights reserved. <span class="emoji">🚀</span></p>
+            <p class="text-sm"><span class="emoji">💖</span> Designed with perfect alignment and vibrant colors for a stellar experience. <span class="emoji">✨</span></p>
         </div>
-        <div class="card card-gradient-3 p-6">
-          <h3 class="text-white text-xl font-bold mb-4">📱 UI/UX Design 💻</h3>
-          <p class="text-white">I create intuitive and engaging user experiences that are both beautiful and functional.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <section id="portfolio" class="section bg-gradient-5 py-xl">
-    <div class="container">
-      <h2 class="text-white text-4xl font-bold mb-8 text-center">🖼️ My Portfolio 🎨</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Portfolio items here -->
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section bg-gradient-1 py-xl">
-    <div class="container">
-      <h2 class="text-white text-4xl font-bold mb-8 text-center">✉️ Contact Me 📧</h2>
-      <p class="text-white text-lg mb-6 text-center">Let's collaborate on your next creative project!</p>
-    </div>
-  </section>
-
-  <footer class="bg-dark py-4 text-white text-center">
-    <p>&copy; 2024 My Creative Portfolio. All rights reserved.  ✌️</p>
-  </footer>
-  <script src="script.js"></script>
+    <script>
+        // JavaScript will be injected here by the build process
+    </script>
 </body>
 </html>

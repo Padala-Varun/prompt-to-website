@@ -6,7 +6,7 @@ import re
 
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-model = genai.GenerativeModel("models/gemini-1.5-flash")
+model = genai.GenerativeModel("models/gemini-2.5-flash")
 
 def generate_website_code(prompt: str):
     """
